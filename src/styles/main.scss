@@ -2,6 +2,17 @@
 @use 'variaveis';
 @use 'hero';
 
+//Inserindo Fonte customizada
+@font-face{ //código para inserir fonte
+    font-family: Avenir; //Escolheremos um nome para a fonte importada
+    src: url(../../assets/fonts/Avenir-Regular.woff2); //aporntamos o local da fonte
+    font-weight: 400;
+}
+@font-face{ //código para inserir fonte
+    font-family: Avenir; //Escolheremos um nome para a fonte importada
+    src: url(../../assets/fonts/Avenir-Bold.woff2); //aporntamos o local da fonte
+    font-weight: 700;
+}
 
 //RESET
 *{
@@ -12,6 +23,7 @@
 
 body{
     background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
 }
 
 //PADRONIZAÇÃO DE TEXTO (padrão - parágrafo)

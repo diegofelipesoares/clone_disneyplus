@@ -1,12 +1,14 @@
+//linkando com outros arquivos scss
 @use 'variaveis';
+
 // classe da seção
 .hero{
-    padding: 8vw;
+    //definindo o tamanho do container principal.
+    padding: 8vw; //ao invés de usar max-width, se usou o padding com vw para o conteúdo lateral
     min-width: 80vh;
     background-image: url(../images/hero_desktop.jpeg);
     text-align: center;
-    //tentar preencher todo o container com a imagem
-    background-size: cover;
+    background-size: cover; //preenche todo o container com a imagem
 
 //"&" serve para apontar a herança da classe, não precisando escrever seu nome todo
 // abaixo seria hero__content, mas pode ser colocado &__content     
@@ -56,13 +58,9 @@
                     background-color: #6421ff;
                     text-transform: uppercase; //texto maiúsculo
                     border: none;
-                    border-radius: 4px;
-                    
-                    
+                    border-radius: 4px;             
                 } 
-
             }
         }
-
     }
 }
