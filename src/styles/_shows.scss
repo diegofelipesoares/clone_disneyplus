@@ -1,0 +1,50 @@
+//importações
+@use 'variaveis';
+
+//Container da Seção
+.shows{//definindo ÁREA da largura das bordas centrais da página
+    //background-color: red;
+    padding: 2vw 5.6vw; 
+
+    //MENU DE NAVEGAÇÃO
+    &__tabs{ //classe das tabs
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &__button{//classe dos botões
+            color: variaveis.$corTextoSecundario;
+            font-size: 20px;
+            border: none;
+            padding-bottom: 5px;
+            background: none;//background e botão não usa background-color
+            text-transform: uppercase;
+            margin: 0 1vw;
+
+            //Classe para definir o elemento ativo que recebe a borda
+            &--is-active{
+                border-bottom: 5px solid variaveis.$corTextoSecundario;
+            }
+        }
+    }
+
+    //GRIDS DE IMAGENS
+    &__list{//classe do ul
+        //criaremos o grid aqui dentro
+        display: grid;//utilizando o grid
+        grid-template-columns: 1fr 1fr 1fr; //quantidade de colunas no grid
+        gap: 24px; //espaçamento vazio entre os grids
+        margin-top: 44px;
+        
+        &__item{
+        display: flex;
+        justify-content: center;
+            img{
+                max-width: 100%;
+                border-radius: 4px;
+
+            }
+        }
+
+    }
+}
