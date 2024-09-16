@@ -52,13 +52,13 @@
         <!-- Menu de navegação -->
          <nav class="shows__tabs">
             <!-- "is-active", para configurar a borda de baixo apenas para o elemento ativo -->
-             <button class="shows__tabs__button shows__tabs__button--is-active">Em breve</button>
-             <button class="shows__tabs__button">Mais populares</button>
-             <button class="shows__tabs__button">Mais no Star+</button>
+             <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">Em breve</button>
+             <button data-tab-button="populares" class="shows__tabs__button">Mais populares</button>
+             <button data-tab-button="star_plus" class="shows__tabs__button">Mais no Star+</button>
          </nav>
 
-         <!-- Grid de imagens -->
-          <ul class="shows__list">
+          <!-- Grid 1 de imagens - Em breve -->
+          <ul data-tab-id="em_breve" class="shows__list shows__list--is-active" >
             <li class="shows__list__item">
                 <img src="./dist/images/em_breve/desencantada.jpg" alt="desencantada">
             </li>
@@ -76,6 +76,50 @@
             </li>
             <li class="shows__list__item">
                 <img src="./dist/images/em_breve/willow.jpg" alt="willow">
+            </li>
+          </ul>
+
+          <!-- Grid 2 de imagens - Mais populares -->
+          <ul data-tab-id="populares" class="shows__list">
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/bluey.jpg" alt="desencantada">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/cavaleira_da_lua.jpg" alt="lobisomem">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/o_incrivel_dr_pol.jpg" alt="sem_limites">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/obi_wan.jpg" alt="spidey">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/red.jpg" alt="the_santa_clauses">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_populares/tudo_igual_sqn.jpg" alt="willow">
+            </li>
+          </ul>
+          
+          <!-- Grid 3 de imagens - Mais no Star+ -->
+          <ul data-tab-id="star_plus" class="shows__list">
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/belair.jpg" alt="desencantada">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/libertadores.jpg" alt="lobisomem">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/nba.jpg" alt="sem_limites">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/os_simpson.jpg" alt="spidey">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/premier_league.jpg" alt="the_santa_clauses">
+            </li>
+            <li class="shows__list__item">
+                <img src="./dist/images/mais_no_star_plus/the_kardashians.jpg" alt="willow">
             </li>
           </ul>
     </section>

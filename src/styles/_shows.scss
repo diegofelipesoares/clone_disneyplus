@@ -31,11 +31,15 @@
     //GRIDS DE IMAGENS
     &__list{//classe do ul
         //criaremos o grid aqui dentro
-        display: grid;//utilizando o grid
+        display: none;//utilizando o grid
         grid-template-columns: 1fr 1fr 1fr; //quantidade de colunas no grid
         gap: 24px; //espaçamento vazio entre os grids
         margin-top: 44px;
         
+        &--is-active {
+            display: grid;
+        }
+
         &__item{
         display: flex;
         justify-content: center;
