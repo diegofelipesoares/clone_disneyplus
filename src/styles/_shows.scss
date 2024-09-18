@@ -20,10 +20,12 @@
             background: none;//background e botão não usa background-color
             text-transform: uppercase;
             margin: 0 1vw;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
 
             //Classe para definir o elemento ativo que recebe a borda
             &--is-active{
-                border-bottom: 5px solid variaveis.$corTextoSecundario;
+                border-color: variaveis.$corTextoSecundario;
             }
         }
     }

@@ -18,11 +18,15 @@ document.addEventListener('DOMContentLoaded', function(){
             escondeTodasAbas();
             //pegamos o aba que tem o Seletor e adicionamos nele a classe is-active
             aba.classList.add('shows__list--is-active');
+            
             //removendo classe dos botões
             removeBotaoAtivo();
             //adicionando a classe ao botão ativo
             botao.target.classList.add('shows__tabs__button--is-active')
+            
             console.log(aba);
+            console.log(botao);
+            console.log(abaAlvo);
         })
     }
 })
