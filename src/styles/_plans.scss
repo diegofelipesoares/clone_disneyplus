@@ -1,0 +1,41 @@
+.plans{
+    padding: 5.6vw; //espaçamento geral
+
+    h2{
+        text-align: center; //título Escolha seu plano
+    }
+
+    &__list{ //<ul> lista de planos
+        display: flex; //Colocando planos um ao lado do outro
+        justify-content: space-around; //espaçamento padrão entre os elementos
+        margin-top: 50px;
+        
+        &__item{ //<li> itens da lista
+            text-align: center;
+            padding: 60px 44px 44px;
+            max-width: 380px; //diminuindo a área do texto e botão
+            width: 100%;
+            
+            &:nth-child(2){ //pseudoSeletor para mudar apenas o item do meio.
+                background-image: url(../images/fundo_combo_plus.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            
+            img{//diminuindo o tamanho do texto
+                height: 83px;
+            }
+
+            strong{ //Preço texto
+                display: block;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+// Aviso final na página
+p{
+    text-align: center;
+}
+
