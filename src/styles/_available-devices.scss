@@ -1,0 +1,28 @@
+.available-devices {
+    padding: 5.6vw; //espaçamento do section
+
+    h2{
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__list{ //Classe do <ul>
+        display: grid; //dividindo em grid
+        gap: 24px;
+        grid-template-columns: repeat(4, 1fr); //função par dividir em 4x frações
+
+        &__item{
+            text-align: center; //alinhando texto
+            h4{
+                margin-top: 20px;
+                margin-bottom: 24px;
+            }
+            img{
+                max-width: 100%; //imagem caber dentro do grid
+            }
+            li{
+                list-style: none;
+            }
+        }
+    }
+}

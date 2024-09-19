@@ -3,7 +3,7 @@
 @use 'hero';
 @use 'shows';
 @use 'plans';
-@use 'watch-anywhere';
+@use 'available-devices';
 
 //Inserindo Fonte customizada
 @font-face{ //código para inserir fonte
@@ -19,7 +19,7 @@
 
 //RESET
 *{
-    margin: 0;z
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -84,4 +84,47 @@ body{
             text-transform: uppercase; //texto maiúsculo
             border: none;
             border-radius: 4px;  
+        }
+
+//classe genérica para seção com imagem e texto lateral        
+        .image-text-section{ //Classe para a SEÇÃO
+            padding: 5.6vw; //espaçamento do container da seção
+            display: grid; //utilizando grid
+            grid-template-columns: 1fr 1fr; //dividindo tela em colunas
+            align-items: center; //alinhando na vertical
+        
+            img{ //definindo tamanho máximo da imagem
+               max-width: 100%;
+            }
+        
+            p{ //estilização do parágrafo
+                margin-top: 24px;
+                text-align: left;
+            }
+        
+            &__text_container{ //container dos textos
+                padding: 2vw;
+            }
+            //Classe só será utilizanda quando a imagem for do tamanho da tela.
+            &--image-full-width{ //colocando a imagem do tamanho da section
+                display: block; //proibir o ajuste automático dos elementos
+                /*position relative é para obrigar o texto com position absolute, 
+                a ficar posicionado em relação à section e não à toda a página*/
+                position: relative; //para obrigar o texto a ficar dentro da section
+                
+                img{
+                    width: 100%;
+                }
+
+                &__text_container{//colocando o text dentro da section com position absolute
+                    position: absolute; //colocar o texto em uma posição fixa e em cima de elementos
+                    top: 5.6vw;
+                    height: 100%;
+                    left: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: calc(50% - 5.6vw) ;
+                }               
+            }
         }
