@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', function(){
     //recuperando elementos com a tag data-tab-button - Botões do Grid
     const buttons = document.querySelectorAll('[data-tab-button]');
+    //recuperando elementos do faq
+    const questions = document.querySelectorAll('[data-faq-question]');
     //recuperando elementos com a tag data-tab-id - Elementos UL do Grid
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
 
@@ -29,7 +31,27 @@ document.addEventListener('DOMContentLoaded', function(){
             console.log(abaAlvo);
         })
     }
+    //percorrendo os elementos questions e ouvindo o click
+    for (let i = 0; i < questions.length; i++){ 
+        questions[i].addEventListener('click', abreOuFechaResposta);
+        //addEventListener retorna por padrão elemento clicado 
+    }
+
 })
+
+//Função para abrir e fechar o faq
+function abreOuFechaResposta(elemento){ //passamos como parâmetro o elemento clicado abreOuFec
+    //guardadando a classe a ser inserida
+    const classe = 'faq__questions__item--is-open';
+    
+    //Recuperando elemento pai
+    const elementoPai = elemento.target.parentNode; //pega o pai do elemento
+    console.log(elemento.target);
+    //inserindo e removendo a classe com o clique
+    elementoPai.classList.toggle(classe);
+
+}
+
 
 //função de remover botão ativo
 function removeBotaoAtivo(){

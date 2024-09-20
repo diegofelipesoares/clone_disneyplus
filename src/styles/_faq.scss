@@ -1,0 +1,79 @@
+@use 'variaveis';
+
+.faq{
+    padding: 5.6vw; //espaçamento padrão
+    h2{ //título Perguntas frequentes
+        text-align:center; //alinhando o título
+        margin-bottom: 24px; //espaço entre título e pergunta
+    }
+    
+    &__questions{//ul
+        &__item{ //li
+            background-color: #13151d;
+            margin-bottom: 16px; //Espaçamento entre os LIs
+
+            &__question{ //li de pergunta
+                color: aliceblue;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                font-weight: 600;
+
+                //Pseudo elemento dentro do question
+                &::after{ //sinal da direita
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
+
+            }
+            &__answer{ //li da resposta
+                //padding: 24px; //espaçamento da resposta
+                //display: none; 
+                /*poderiamos ter utilizar o display: none
+                para esconder a resposta, 
+                porém o professor quer mostrar outra forma*/
+                
+                height: 0; //esconder div
+                overflow: hidden; //esconder div
+                padding: 0 24px;
+                transition: height, 0.5s ease; //transição de meio segundo
+
+                p{
+                    text-align: left;
+                }
+                ul{
+                    list-style-type: disc; //colocar bolinha preenchida nos tópicos
+                    li{
+                        padding-top: 12px;
+                        padding-left: 6px;
+                        margin-left: 22px;
+                        ;
+                    }
+                }
+            }
+
+            &--is-open{ //classe para abertura da resposta
+                /*abaixo, adicionamos as classes que serão
+                modificadas ao se utilizar a classe &--is-open*/
+                .faq__questions__item__question::after{
+                    content: '-';
+                }
+                
+                .faq__questions__item__answer{
+                    height: auto;
+                    padding-bottom: 24px;
+                    transition: height, 0.5s ease; //transição de meio segundo
+                    //display: block;
+                }
+            }
+        }
+    }
+}
