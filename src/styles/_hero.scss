@@ -10,6 +10,11 @@
     text-align: center;
     background-size: cover; //preenche todo o container com a imagem
 
+    .button{ //somente o hero terá o botão com as margins
+        margin-top: 2vw;
+        margin-bottom: 8px;
+    }
+
 //"&" serve para apontar a herança da classe, não precisando escrever seu nome todo
 // abaixo seria hero__content, mas pode ser colocado &__content     
     &__content{

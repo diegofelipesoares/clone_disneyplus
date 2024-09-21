@@ -5,6 +5,8 @@
 @use 'plans';
 @use 'available-devices';
 @use 'faq';
+@use 'footer';
+@use 'header';
 
 //Inserindo Fonte customizada
 @font-face{ //código para inserir fonte
@@ -71,20 +73,44 @@ body{
             @include title(28px); 
         }
 
-        .button{
-            display: block;
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
             height: 60px;
-            margin-top: 2vw;
-            margin-bottom: 8px;
             font-size: 18px;
             //para importar uma variável de outro arquivo, tem que 
             //colocar primeiro o "nome_do_arquivo.variavel"
             color: variaveis.$corTextoSecundario;
-            background-color: #6421ff;
+            background-color: variaveis.$corDeFundoBotaoPrimario;
             text-transform: uppercase; //texto maiúsculo
             border: none;
             border-radius: 4px;  
+            padding: 8px 14px;
+            letter-spacing: 1px; //espaçamento entre as letras
+            border: 1px solid variaveis.$corDeFundoBotaoPrimario;
+            transition: 0.5s;
+            &:hover{
+                background-color: lighten(variaveis.$corDeFundoBotaoPrimario, 3%);
+                transition: 0.5s;
+            }
+
+            &--secondary {
+                background-color: variaveis.$corDeFundoBotaoSecundario;
+                border-color: variaveis.$corDeFundoBotaoSecundario;
+                &:hover{
+                    background-color: lighten(variaveis.$corDeFundoBotaoSecundario, 3%);
+                }
+            }
+            &--dark{
+                background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
+                border-color: variaveis.$corTextoSecundario;
+                &:hover{
+                    background-color: variaveis.$corTextoSecundario;
+                    color: variaveis.$corDeFundo;
+                }
+            }
         }
 
 //classe genérica para seção com imagem e texto lateral        

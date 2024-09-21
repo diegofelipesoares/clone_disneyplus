@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
+    <!-- Cabeçalho com menu e logo -->
+    <header class="header">
+        <div class="header__container">
+            <!-- É sempre bom o h1 estar dentro do header para as páginas de busca -->
+            <h1>
+                <img class="header__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+                <ul class="header__links">
+                    <li class="header__links__item">
+                        <a href="#" class="button button--secondary">Assine agora</a>
+                    </li>
+                    <li class="header__links__item">
+                        <a href="#" class="button button--dark">Entrar</a>
+                    </li>
+                </ul>
+            </h1>
+        </div>
+    </header>
+
     <!-- Seção do banner inicial -->
     <section class="hero">
         
@@ -14,22 +32,22 @@
         <div class="hero__content">
             
             <!-- Título que será a imagem da logo do disney + -->
-             <h1 class="hero__content__branding">
+            <div class="hero__content__branding">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
-             </h1>
-             <h3 class="title--small">
+            </div>
+            <h3 class="title--small">
                 As melhores histórias em um só lugar
-             </h3>
-             <p>
+            </h3>
+            <p>
                 <a href="#" class="link-text">Assinar o Disney+</a>
                 <br>
                 <span class="text">
                     R$ 27,90/mês ou R$ 279,90/ano à vista*
                 </span>
-             </p>
-             
-             <!-- Logos e botões de assinatura -->
-             <ul class="hero__content__combos">
+            </p>
+
+            <!-- Logos e botões de assinatura -->
+            <ul class="hero__content__combos">
                 <li class="hero__content__combos__combo">
                     <img src="./dist/images/logos/disney_star_plus.png" alt="Disney+ Star+ Combo+">
                     <button class="button">Assine Agora</button>
@@ -40,25 +58,25 @@
                     <button class="button">Assine Agora</button>
                     <span class="text">R$ 55,90/mês*</span>
                 </li>
-             </ul>
-             <p class="text--small">
+            </ul>
+            <p class="text--small">
                 *O preço pode variar caso a assinatura seja feita através de outras plataformas.
-             </p>
+            </p>
         </div>
     </section>
 
     <!-- Seção 2 - Grid de filmes -->
     <section class="shows">
         <!-- Menu de navegação -->
-         <nav class="shows__tabs">
+        <nav class="shows__tabs">
             <!-- "is-active", para configurar a borda de baixo apenas para o elemento ativo -->
-             <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">Em breve</button>
-             <button data-tab-button="populares" class="shows__tabs__button">Mais populares</button>
-             <button data-tab-button="star_plus" class="shows__tabs__button">Mais no Star+</button>
-         </nav>
+            <button data-tab-button="em_breve" class="shows__tabs__button shows__tabs__button--is-active">Em breve</button>
+            <button data-tab-button="populares" class="shows__tabs__button">Mais populares</button>
+            <button data-tab-button="star_plus" class="shows__tabs__button">Mais no Star+</button>
+        </nav>
 
-          <!-- Grid 1 de imagens - Em breve -->
-          <ul data-tab-id="em_breve" class="shows__list shows__list--is-active" >
+        <!-- Grid 1 de imagens - Em breve -->
+        <ul data-tab-id="em_breve" class="shows__list shows__list--is-active" >
             <li class="shows__list__item">
                 <img src="./dist/images/em_breve/desencantada.jpg" alt="desencantada">
             </li>
@@ -77,10 +95,10 @@
             <li class="shows__list__item">
                 <img src="./dist/images/em_breve/willow.jpg" alt="willow">
             </li>
-          </ul>
+        </ul>
 
-          <!-- Grid 2 de imagens - Mais populares -->
-          <ul data-tab-id="populares" class="shows__list">
+        <!-- Grid 2 de imagens - Mais populares -->
+        <ul data-tab-id="populares" class="shows__list">
             <li class="shows__list__item">
                 <img src="./dist/images/mais_populares/bluey.jpg" alt="desencantada">
             </li>
@@ -99,10 +117,10 @@
             <li class="shows__list__item">
                 <img src="./dist/images/mais_populares/tudo_igual_sqn.jpg" alt="willow">
             </li>
-          </ul>
-          
-          <!-- Grid 3 de imagens - Mais no Star+ -->
-          <ul data-tab-id="star_plus" class="shows__list">
+        </ul>
+
+        <!-- Grid 3 de imagens - Mais no Star+ -->
+        <ul data-tab-id="star_plus" class="shows__list">
             <li class="shows__list__item">
                 <img src="./dist/images/mais_no_star_plus/belair.jpg" alt="desencantada">
             </li>
@@ -121,7 +139,7 @@
             <li class="shows__list__item">
                 <img src="./dist/images/mais_no_star_plus/the_kardashians.jpg" alt="willow">
             </li>
-          </ul>
+        </ul>
     </section>
     
     <!-- Seção 3 - Planos de compra -->
@@ -162,9 +180,9 @@
     </section>
 
     <!-- Seção 4 - Assista do seu jeito -->
-     <section class="image-text-section">
+    <section class="image-text-section">
         <img src="./src/images/tv_pc_tablet_celular.png" alt="Imagem com TV, computador, tablet e celular">
-       
+
         <div class="image-text-section__text_container">
             <h2 class="title">Assita do seu jeito</h2>
             <p class="text--big">Aproveite a tela grande da TV ou tablet, laptop, 
@@ -172,12 +190,12 @@
             Além disso, para a felicidade de todos, é possível assiter em até 4 telas 
             ao mesmo tempo.</p>
         </div>
-     </section>
+    </section>
 
     <!-- Seção 5 - Baixe filmes e séries -->
-     <section class="image-text-section image-text-section--image-full-width">
+    <section class="image-text-section image-text-section--image-full-width">
         <img src="./src/images/fundo_rei_leao.png" alt="Rei Leão">
-       
+
         <div class="image-text-section__text_container 
         image-text-section--image-full-width__text_container">
             <h2 class="title">Baixe filemes e séries </h2>
@@ -186,10 +204,10 @@
                 sem internet.
             </p>
         </div>
-     </section>
+    </section>
 
-     <!-- Seção 6 - Dispositivos -->
-     <section class="available-devices">
+    <!-- Seção 6 - Dispositivos -->
+    <section class="available-devices">
         <h2 class="title">Disponível nos seus dispositivos favoritos</h2>
         <ul class="available-devices__list">
             <li class="available-devices__list__item">
@@ -233,10 +251,10 @@
                 </ul>
             </li>
         </ul>
-     </section>
+    </section>
 
-     <!-- Seção de perguntas frequentes -->
-     <section class="faq">
+    <!-- Seção de perguntas frequentes -->
+    <section class="faq">
         <h2 class="title">Perguntas Frequentes</h2>
         <ul class="faq__questions">
             <li class="faq__questions__item">
@@ -280,7 +298,55 @@
                 </div>
             </li>
         </ul>
-     </section>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer__container">
+            <img class="footer__logo" src="./dist/images/disneyplus.svg" alt="Disney+">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <div class="language-selector">
+                        <img src="./dist/images/icones/globe.svg" alt="globo do mundo">
+                        <select>
+                            <option>English</option>
+                            <option selected>Português</option>
+                        </select>
+                    </div>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Termos e Condições de Uso</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Política de privacidade</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Proteção de dados no Brasil</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Anúncios personalizados</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Dispositivos compatíveis</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Ajuda</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#" class="text--small">Sobre o Disney+</a>
+                </li>
+            </ul>
+        
+            <p class="text--small">
+                © 2024 Disney e suas empresas afiliadas. Todos os direitos reservados.
+            </p>
+            <p class="text--small">
+                A programação do conteúdo esportivo varia de acordo com o plano. 
+                Para usar o Disney+, é necessário ser assinante 
+                e ter mais de 18 anos de idade. Conteúdo sujeito a disponibilidade.
+            </p>
+        </div>
+    </footer>
 
 
     <script src="./src/main.js"></script>
