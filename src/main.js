@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const questions = document.querySelectorAll('[data-faq-question]');
     //recuperando elementos com a tag data-tab-id - Elementos UL do Grid
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
+    /*recuperando a section hero para dar visibilidade aos menus
+    após passarem pelo final da seção hero*/
+    const heroSection = document.querySelector('.hero');
+    const alturaHero = heroSection.clientHeight; //recuperando a medida da altura do hero.
+
+    //pegando a posição do Scroll da página
+    window.addEventListener('scroll', function(){
+        const posicaoAtual = window.scrollY //posição de rolagem no eixo y
+        if (posicaoAtual < alturaHero){
+            console.log("ocultar os elementos")
+        }
+    })
 
     //TROCAR ABAS - Vamos percorrer os botões (iterar) através do for
     for (let i = 0; i< buttons.length; i++){

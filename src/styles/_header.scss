@@ -1,4 +1,24 @@
+@use 'variaveis';
+
 .header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corDeFundo; //colocando o background preto como default
+
+    &--is-hidden{
+        background-color: transparent; //passando o background para transparente
+
+        .header__logo{ //logo do header
+            opacity: 0;
+
+        }
+        .header__links__item:first-child{ //primeiro link
+            opacity: 0;
+        }
+
+    }
+
     &__container{
         h1{
             display: flex;
