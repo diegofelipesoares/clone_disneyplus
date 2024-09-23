@@ -6,16 +6,18 @@ document.addEventListener('DOMContentLoaded', function(){
     const questions = document.querySelectorAll('[data-faq-question]');
     //recuperando elementos com a tag data-tab-id - Elementos UL do Grid
     const tabsContainer = document.querySelectorAll('[data-tab-id]');
-    /*recuperando a section hero para dar visibilidade aos menus
+    /*recuperando a section hero para ocultar a visibilidade dos menus
     após passarem pelo final da seção hero*/
     const heroSection = document.querySelector('.hero');
     const alturaHero = heroSection.clientHeight; //recuperando a medida da altura do hero.
 
-    //pegando a posição do Scroll da página
+    //Ocultar usando posição do scroll.
     window.addEventListener('scroll', function(){
         const posicaoAtual = window.scrollY //posição de rolagem no eixo y
         if (posicaoAtual < alturaHero){
-            console.log("ocultar os elementos")
+            ocultaElementosDoHeader();
+        }else{
+            exibeElementosDoHeader();
         }
     })
 
@@ -37,11 +39,6 @@ document.addEventListener('DOMContentLoaded', function(){
             removeBotaoAtivo();
             //adicionando a classe ao botão ativo
             botao.target.classList.add('shows__tabs__button--is-active')
-            
-            //testando no console 
-            console.log(aba);
-            console.log(botao);
-            console.log(abaAlvo);
         })
     }
     
@@ -53,6 +50,19 @@ document.addEventListener('DOMContentLoaded', function(){
 })
 
 //FUNÇÕES
+
+//Função para ocultar elementos do header
+function ocultaElementosDoHeader(){ //cirando função
+ const header = document.querySelector('header'); //selecionando a classe
+ header.classList.add('header--is-hidden');
+}
+
+//Função para exibir elementos do header
+function exibeElementosDoHeader(){ //cirando função
+    const header = document.querySelector('header'); //selecionando a classe
+    header.classList.remove('header--is-hidden');
+   }
+
 //FAQ - Função para abrir e fechar o FAQ
 function abreOuFechaResposta(elemento){ //passamos como parâmetro o elemento clicado abreOuFec
     //guardadando a classe a ser inserida
