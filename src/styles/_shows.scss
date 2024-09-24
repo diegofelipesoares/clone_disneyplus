@@ -27,6 +27,9 @@
             &--is-active{
                 border-color: variaveis.$corTextoSecundario;
             }
+            @media (max-width: 768px){
+                font-size: 16px;
+            }
         }
     }
 

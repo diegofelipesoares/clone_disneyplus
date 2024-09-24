@@ -26,6 +26,11 @@
             display: flex;
             justify-content: space-between;
             padding: 8px 36px;
+
+            @media (max-width: 768px){
+                padding: 0;
+            }
+
         }
     }
 
@@ -52,5 +57,12 @@
 
     .button{
         height: 50px;
+
+        @media (max-width: 768px){
+            font-size: 13px;
+            padding: 8px 11px;
+            height: 40px;
+            letter-spacing: 0;
+        }
     }
 }
