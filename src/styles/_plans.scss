@@ -10,11 +10,25 @@
         justify-content: space-around; //espaçamento padrão entre os elementos
         margin-top: 50px;
         
+
+        @media (max-width: 768px){ //responsividade
+            display: block;
+            justify-content: center;
+            width: 100%;
+        }
+        
         &__item{ //<li> itens da lista
             text-align: center;
             padding: 60px 44px 44px;
             max-width: 380px; //diminuindo a área do texto e botão
             width: 100%;
+
+            @media (max-width: 768px) {
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                }
+            }
             
             &:nth-child(2){ //pseudoSeletor para mudar apenas o item do meio.
                 background-image: url(../images/fundo_combo_plus.png);
@@ -32,7 +46,7 @@
             }
         }
     }
-}
+
 
 // Aviso final na página
 p{

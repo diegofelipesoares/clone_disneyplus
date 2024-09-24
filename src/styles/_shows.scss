@@ -38,6 +38,11 @@
         gap: 24px; //espaçamento vazio entre os grids
         margin-top: 44px;
         
+        //responsividade para celular
+        @media (max-width: 768px){
+            grid-template-columns: 1fr 1fr; //colocar 2 colunas
+        }
+
         &--is-active {
             display: grid;
         }

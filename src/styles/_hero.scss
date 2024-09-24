@@ -5,10 +5,17 @@
 .hero{
     //definindo o tamanho do container principal.
     padding: 8vw; //ao invés de usar max-width, se usou o padding com vw para o conteúdo lateral
-    min-width: 80vh;
+    //min-width: 80vh;
     background-image: url(../images/hero_desktop.jpeg);
     text-align: center;
     background-size: cover; //preenche todo o container com a imagem
+
+    @media (max-width: 768px){
+        background-image: url(../images/hero_celular.jpeg);
+        padding-top: 50vw;
+        background-size: contain; //imagem no tamanho total mantendo proporções
+        background-repeat: no-repeat;
+    }
 
     .button{ //somente o hero terá o botão com as margins
         margin-top: 2vw;
@@ -23,6 +30,10 @@
             max-width: 320px;
             //centralizando a imagem
             margin: 0 auto 38px;
+
+            @media (max-width: 768px){
+                max-width: 180px;
+            }
         }
         .title--small{
             margin-bottom: 64px;
@@ -40,12 +51,21 @@
             display: flex;
             //coloca os dois combo abaixo ajustados um na esquerda outro na direita
             justify-content: space-between;
+            @media (max-width: 768px){
+                display: block;
+            }
             
             //Configuração para cada combo
             &__combo{
                 //faz cada combo ocupar o espaço de 50% subtraído 12 px
                 width: calc(50% - 12px);
-                // define a altura do imagem                
+                // define a altura do imagem 
+                
+                @media (max-width: 768px){
+                    width:100%;
+                    margin-bottom: 24px;
+                }
+                
                 img{
                     max-height: 60px;
                 }

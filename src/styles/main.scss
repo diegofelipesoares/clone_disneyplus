@@ -43,13 +43,23 @@ body{
         //Criando as CLASSES de texto
         .text--big{ //vamos abaixo utilizar o mixin
             @include text(18px);
+            @media (max-width: 768px){
+                @include text(15px);
+            }
         }
         .text {
             @include text; //não passamos parâmetro porque ele utilizar o valor padrão do mixin
+            @media (max-width: 768px){
+                @include text(14px);
+            }  
         }
         .text--small{
             @include text(12px);
+            @media (max-width: 768px){
+                @include text(11px);
+            }
         }
+        
         .link-text{
             @include text(18px);
             color: variaveis.$corTextoSecundario;
@@ -65,12 +75,21 @@ body{
         //Criando as CLASSES de título
         .title--big{ //vamos abaixo utilizar o mixin
             @include title(44px);
+            @media (max-width: 768px){
+                @include title(26px);
+            }
         }
         .title {
             @include title; //não passamos parâmetro porque ele utilizar o valor padrão do mixin
+            @media (max-width: 768px){
+                @include title(24px);
+            }
         }
         .title--small{
             @include title(28px); 
+            @media (max-width: 768px){
+                @include title(22px);
+            }
         }
 
         .button {
@@ -119,6 +138,10 @@ body{
             display: grid; //utilizando grid
             grid-template-columns: 1fr 1fr; //dividindo tela em colunas
             align-items: center; //alinhando na vertical
+
+            @media(max-width: 768px){
+                display: block;
+            }
         
             img{ //definindo tamanho máximo da imagem
                max-width: 100%;
@@ -152,6 +175,12 @@ body{
                     flex-direction: column;
                     justify-content: center;
                     width: calc(50% - 5.6vw) ;
+
+                    @media(max-width: 768px){
+                        position: relative;
+                        left: 0;
+                        width: 100%;
+                    }
                 }               
             }
         }
