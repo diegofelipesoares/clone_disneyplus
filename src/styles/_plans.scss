@@ -9,12 +9,14 @@
         display: flex; //Colocando planos um ao lado do outro
         justify-content: space-around; //espaçamento padrão entre os elementos
         margin-top: 50px;
+        list-style: none;
         
 
         @media (max-width: 768px){ //responsividade
             display: block;
             justify-content: center;
             width: 100%;
+            margin-top: 20px;
         }
         
         .button{
@@ -28,25 +30,39 @@
             width: 100%;
 
             @media (max-width: 768px) {
-                justify-content: center;
-                align-items: center;
-                max-width: 100%;
-                }
+                text-align: center; // Centraliza o conteúdo inline ou inline-block
+                display: flex; // Torna o container flexível
+                flex-direction: column; // Garante que os elementos fiquem em coluna
+                justify-content: center; // Centraliza verticalmente
+                align-items: center; // Centraliza horizontalmente
+                margin-bottom: 20px; // Remove padding lateral para evitar deslocamento
+                max-width: 100%; // Garante que o item ocupe toda a largura disponível
+                padding: 40px 24px 24px; // Ajusta o padding para dispositivos menores
             }
-            
+
             &:nth-child(2){ //pseudoSeletor para mudar apenas o item do meio.
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;
                 background-size: contain;
+                width: 100%;
             }
             
             img{//diminuindo o tamanho do texto
                 height: 83px;
+                margin: 0 auto; // Garante que a imagem esteja centralizada
+                display: block; // Remove o comportamento inline padrão da imagem
             }
 
             strong{ //Preço texto
                 display: block;
                 margin-top: 24px;
+            }
+
+            @media (max-width: 768px) {
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                }
             }
         }
     }

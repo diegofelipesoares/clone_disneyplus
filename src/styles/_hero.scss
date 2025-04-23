@@ -8,13 +8,15 @@
     //min-width: 80vh;
     background-image: url(../images/hero_desktop.jpeg);
     text-align: center;
-    background-size: cover; //preenche todo o container com a imagem
+    background-size: contain; //preenche todo o container com a imagem
+    background-position: center; // centraliza a imagem no container
+    background-repeat: no-repeat; // evita repetição da imagem
 
     @media (max-width: 768px){
         background-image: url(../images/hero_celular.jpeg);
-        padding-top: calc(50vw + 25px);
         background-size: contain; //imagem no tamanho total mantendo proporções
         background-repeat: no-repeat;
+        background-position: top;
     }
 
     .button{ //somente o hero terá o botão com as margins
@@ -33,6 +35,7 @@
 
             @media (max-width: 768px){
                 max-width: 180px;
+                padding-top: calc(50vw + 10px);
             }
         }
         .title--small{
